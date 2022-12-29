@@ -1,0 +1,2 @@
+#LWP-Cookies-2.0
+Set-Cookie3: PHPSESSID=c95059op9kjt43ugskk32a48ed; path="/"; domain="192.168.37.1"; path_spec; discard; version=0
