@@ -1,7 +1,6 @@
 import urllib
 
 import requests
-import urllib3.util
 from bs4 import BeautifulSoup
 
 if __name__ == '__main__':

@@ -60,12 +60,12 @@ if __name__ == '__main__':
                 chunk_size = 1024
                 content_size = int(response.headers['content-length'])
                 if response.status_code == 200:
-                    print('文件大小:%0.2f KB' % (content_size / chunk_size))
+                    print('file size:%0.2f KB' % (content_size / chunk_size))
                     pic_name = '%03d.jpg' % (idx + 1)
                     pic_save_path = os.path.join(chapter_save_dir, pic_name)
                     with open(pic_save_path, "wb") as file:
                         for data in response.iter_content(chunk_size=chunk_size):
                             file.write(data)
                 else:
-                    print('链接异常')
-            print('下载完成！')
+                    print('link error')
+            print('download successful！')
