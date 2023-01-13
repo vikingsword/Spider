@@ -9,7 +9,6 @@ import requests
 from bs4 import BeautifulSoup
 from tqdm import tqdm
 import urllib.request, urllib.error
-import random
 import queue
 import threading
 
@@ -100,8 +99,6 @@ def writeToFile(content, bookName):
     with open(fileName, 'a', encoding='utf-8') as f:
         f.write(content)
     f.close()
-    pass
-
     pass
 
 

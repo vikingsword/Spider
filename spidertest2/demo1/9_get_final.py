@@ -23,7 +23,7 @@ def getSoup(target):
 
 
 def getUnitContent():
-    global content
+    content = ''
     headers = {
         "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36"
     }
@@ -39,7 +39,7 @@ def getUnitContent():
     texts_parse = texts.text.strip().replace('\xa0', '')
     # join content
     content = texts_parse + '\n\n'
-    content.encode('utf-8')
+    return content.encode('utf-8')
 
 
 if __name__ == '__main__':
@@ -60,8 +60,8 @@ if __name__ == '__main__':
         url = scheme + '://' + target + i['href']
         title = str(i['title']).replace(' ', ' ')
 
-        getUnitContent()
-        res = title + '\n' + content
+        cont = getUnitContent()
+        res = title + '\n' + str(cont)
 
         # file output
         fileName = bookName.text + '.txt'
